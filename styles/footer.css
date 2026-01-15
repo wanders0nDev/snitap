@@ -20,7 +20,7 @@ footer {
             transition: rotate 350ms;
 
             &:hover {
-                rotate: 90deg
+                rotate: 90deg;
             }
         }
     }
@@ -34,6 +34,7 @@ footer {
             position: relative;
 
             &:hover::after {
+                opacity: 1;
                 transform: scaleX(1);
             }
         }
@@ -73,13 +74,18 @@ footer {
                 scale: 1;
             }
 
+            & img {
+                width: 1.5rem;
+                height: auto;
+            }
+
             &::before {
                 content: "";
 
                 width: inherit;
                 height: inherit;
                 border-radius: inherit;
-                color: var(--snitap-sun);
+                background: var(--snitap-sun);
 
                 position: absolute;
                 top: 0;
@@ -87,7 +93,8 @@ footer {
                 z-index: -1;
                 
                 scale: 0;
-                transition: scale 2ms;
+                transition: scale 200ms;
         }
     }
+}
 }
